@@ -1,0 +1,16 @@
+{
+  "name": "atom-json-escape",
+  "main": "./lib/atom-json-escape",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Stringify text",
+  "activationEvents": [
+    "atom-json-escape:escape",
+    "atom-json-escape:unescape"
+  ],
+  "repository": "https://github.com/davidmerrique/atom-json-escape",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  }
+}
