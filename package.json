@@ -1,7 +1,7 @@
 {
   "name": "atom-json-escape",
   "main": "./lib/atom-json-escape",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "Stringify text",
   "activationEvents": [
