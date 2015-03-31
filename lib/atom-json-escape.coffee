@@ -1,15 +1,12 @@
-escape = (editor) ->
-  text = editor.replaceSelectedText {}, JSON.stringify
-
-unescape = (editor) ->
-  text = editor.replaceSelectedText {}, JSON.parse
-
-module.exports =
+module.exports = AtomJsonEscape =
   activate: (state) ->
-    atom.workspaceView.command 'atom-json-escape:escape', '.editor', ->
-      editor = atom.workspaceView.getActivePaneItem()
-      escape(editor)
+    atom.commands.add 'atom-text-editor',
+      'atom-json-escape:escape': (e) ->
+        editor = @getModel()
+        text = editor.getText()
+        editor.insertText JSON.stringify(text), select: true
 
-    atom.workspaceView.command 'atom-json-escape:unescape', '.editor', ->
-      editor = atom.workspaceView.getActivePaneItem()
-      unescape(editor)
+      'atom-json-escape:unescape': (e) ->
+        editor = @getModel()
+        text = editor.getText()
+        editor.insertText JSON.parse(text), select: true
