@@ -1,8 +1,12 @@
 # See https://atom.io/docs/latest/creating-a-package#menus for more details
 'context-menu':
-  '.overlayer':
-      'Json Escape': 'atom-json-escape:escape'
-      'Json Unescape': 'atom-json-escape:unescape'
+  '.overlayer': [
+    label: 'Json Escape'
+    command: 'atom-json-escape:escape'
+  ,
+    label: 'Json Unescape' 
+    command: 'atom-json-escape:unescape'
+  ]
 
 'menu': [
   {
